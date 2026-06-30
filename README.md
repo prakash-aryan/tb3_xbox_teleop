@@ -1,6 +1,6 @@
 # tb3_xbox_teleop
 
-ROS 2 package for driving a TurtleBot3 in Gazebo with a Bluetooth Xbox controller. It provides split-stick control, an LT/RT brake, speed-adaptive controller rumble, and an optional lidar proximity warning. It targets ROS 2 Jazzy and the new Gazebo (`gz sim`), and uses the TurtleBot3 house world.
+ROS 2 package for driving a TurtleBot3 in Gazebo with a Bluetooth Xbox controller. It provides split-stick control, an LT/RT brake, speed-adaptive haptic feedback, and an optional lidar proximity warning. It targets ROS 2 Jazzy and the new Gazebo (`gz sim`), and uses the TurtleBot3 house world.
 
 The repository is a colcon workspace; the package is in `src/tb3_xbox_teleop`.
 
@@ -32,8 +32,8 @@ The teleop stack runs entirely on the laptop and is independent of the target. I
 | Left stick up/down | Drive forward and back (max 0.22 m/s, the real Burger limit) |
 | Right stick left/right | Turn (max 2.84 rad/s) |
 | LT or RT (hold) | Brake: stop the robot; rumble goes silent |
-| Rumble | Low-frequency vibration proportional to speed, silent when stopped |
-| Rumble (proximity, opt-in) | Increases as the robot approaches an obstacle |
+| Haptics | Low-frequency rumble proportional to speed, silent when stopped |
+| Haptics (proximity, opt-in) | Rumble increases as the robot approaches an obstacle |
 
 ## Prerequisites
 
